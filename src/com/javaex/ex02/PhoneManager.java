@@ -28,7 +28,6 @@ public class PhoneManager {
 		sc = new Scanner(System.in);
 		pList = new ArrayList<Person>();
 
-		pList = getList();
 	}
 
 	// 시작준비 (시작화면 출력과 리스트 가져온다)=====================================================
@@ -59,13 +58,14 @@ public class PhoneManager {
 		}
 
 		System.out.println("****************************************");
-		System.out.println("*                    전화번호 관리 프로그램  V.02             *");
+		System.out.println("*                 전화번호 관리 프로그램  V.02                *");
 		System.out.println("****************************************");
 
 		br.close();
 	}
 
-	// 메뉴 출력과 입력을 받는다.================================================================
+	// 메뉴 출력과 입력을
+	// 받는다.================================================================
 
 	public int showMenu() {
 
@@ -199,7 +199,7 @@ public class PhoneManager {
 		System.out.println("< 5. 종료 >");
 		System.out.println("");
 		System.out.println("****************************************");
-		System.out.println("*                                   감사합니다.                               *");
+		System.out.println("*                                감사합니다.                                  *");
 		System.out.println("****************************************");
 
 	}
@@ -208,19 +208,6 @@ public class PhoneManager {
 
 	public void showEtc() {
 		System.out.println("[ 잘못 입력하셨습니다. 1 ~ 5 사이의 범위로 다시 입력해 주세요. ]");
-	}
-
-	// 파일을 읽어 리스트에 담아 전달한다.==========================================================
-
-	private List<Person> getList() {
-		return pList;
-
-	}
-
-	// 리스트를 파일에 저장한다.================================================================
-
-	private void saveList() {
-
 	}
 
 }
