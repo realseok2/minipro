@@ -42,8 +42,6 @@ public class PhoneApp {
 
 		}
 
-//-----------------------------------------------------------------------------------------------------------	목록 번호 생성
-
 //-----------------------------------------------------------------------------------------------------------		
 
 		System.out.println("****************************************");
@@ -66,17 +64,14 @@ public class PhoneApp {
 				// 리스트출력
 				System.out.println("< 1. 리스트 >");
 
-				for (Person p : personList) {
-					System.out.println(p.getName() + "   " + p.getHp() + "   " + p.getCompany());
+				// 목록 번호 생성
+				for (int i = 0; i < personList.size(); i++) {
+					System.out.print((i + 1) + ".\t   ");
+					personList.get(i).showInfo();
 				}
 
 				br.close();
 
-				for (int i = 0; i <= personList.size(); i++) {
-
-//					System.out.println((i + 1) + );
-
-				}
 				break;
 //-----------------------------------------------------------------------------------------------------------------------
 			case 2:
@@ -131,13 +126,42 @@ public class PhoneApp {
 				for (Person p : personList) {
 					bwDel.write(p.getName() + "," + p.getHp() + "," + p.getCompany() + "\n");
 				}
+
+				System.out.println("[ 삭제되었습니다. ]");
 				bwDel.close();
 				break;
 
 //-----------------------------------------------------------------------------------------------------------------------
 			case 4:
 				// 검색
-				System.out.println("< 4. 삭제 >");
+				System.out.println("< 4. 검색 >");
+				System.out.print(">이름 : ");
+
+				// 이름 검색기능 추가
+				String search = sc.next();
+
+				for (int i = 0; i < personList.size(); i++) {
+					if (personList.get(i).getName().contains(search)) {
+						System.out.print((i + 1) + ".\t   ");
+						personList.get(i).showInfo();
+					}
+				}
+
+//				try {
+//
+//					// 이름 검색기능 추가
+//					String search = sc.next();
+//
+//					for (int i = 0; i < personList.size(); i++) {
+//						if (personList.get(i).getName().contains(search)) {
+//							System.out.print((i + 1) + ".\t   ");
+//							personList.get(i).showInfo();
+//						}
+//					}
+//
+//				} catch (IOException e) {
+//					System.out.println("[ 검색 할 수 없는 단어입니다. ]");
+//				}
 
 				break;
 //-----------------------------------------------------------------------------------------------------------------------

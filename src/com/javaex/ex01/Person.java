@@ -48,7 +48,7 @@ public class Person {
 //--------------------------------------------------------------------------									showInfo()
 	
 	public void showInfo() {
-		System.out.println(name + ",   " + hp + ",   " + company);
+		System.out.println(name + "   " + hp + "   " + company);
 	}
 
 //--------------------------------------------------------------------------									toString()
