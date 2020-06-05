@@ -1,10 +1,13 @@
 package com.javaex.ex03;
 
+import java.io.IOException;
 import java.util.List;
+
+import com.javaex.ex01.Person;
 
 public class PhoneApp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		/*
 		PhoneView 생성
@@ -36,7 +39,7 @@ public class PhoneApp {
 				break;
 
 			case 2:
-				Person phoneVO = phoneView.showAdd();
+				Person phoneVO = (Person) phoneView.showAdd();
 				phoneRepo.addInfo(phoneVO);
 				phoneView.showAddResult();
 				break;
