@@ -39,7 +39,7 @@ public class PhoneApp {
 				break;
 
 			case 2:
-				Person phoneVO = (Person) phoneView.showAdd();
+				Person phoneVO = phoneView.showAdd();
 				phoneRepo.addInfo(phoneVO);
 				phoneView.showAddResult();
 				break;

@@ -1,9 +1,5 @@
 package com.javaex.ex03;
 
-import java.io.BufferedWriter;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -67,7 +63,7 @@ public class PhoneView {
 	}
 
 	// 2.등록 : 등록을 위한 화면을 출력하고 사용자가 입력한 데이트를 받아 Person의 인스턴스에 담아 전달하는 메소드
-	public List<Person> showAdd() {
+	public Person showAdd() {
 
 /////////////////////////////////////////////////////////////////////////////
 		// 등록
@@ -82,11 +78,9 @@ public class PhoneView {
 		System.out.print(">회사전화 : ");
 		String personAddCompany = sc.nextLine();
 
-		List<Person> phoneList = new ArrayList<Person>();
-		// 입력된 데이터를 new person으로 하여 새로운 칸에 담아 add합니다.
-		phoneList.add(new Person(personAddName, personAddHp, personAddCompany));
-		return phoneList;
-
+		Person person = new Person(personAddName, personAddHp, personAddCompany);
+		return person;
+		
 /////////////////////////////////////////////////////////////////////////////	
 
 	}
