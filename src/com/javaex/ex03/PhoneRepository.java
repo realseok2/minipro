@@ -18,8 +18,10 @@ public class PhoneRepository {
 
 	// phoneDB.txt 파일을 읽어 모든 전화번호(리스트)를 전달하는 메소드
 	public List<Person> getList() throws IOException {
+		
 /////////////////////////////////////////////////////////////////////////////	
 		List<Person> phoneList = new ArrayList<Person>();
+		
 		// 파일을 불러온 후 속성에 맞게 UTF-8을 설정해 줍니다.
 		InputStream in = new FileInputStream("./PhoneDB.txt");
 		InputStreamReader isr = new InputStreamReader(in, "UTF-8");
@@ -59,6 +61,7 @@ public class PhoneRepository {
 
 		// 리스트를 , 조합하여 원본 형식에 맞게 작성해줍니다.
 		// 이 때 향상된 for문을 사용하여 작성합니다.
+		// 메모장에 작성되는 내용.
 		for (Person p : list) {
 			bw.write(p.getName() + "," + p.getHp() + "," + p.getCompany() + "\n");
 		}

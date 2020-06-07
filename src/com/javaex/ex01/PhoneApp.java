@@ -79,7 +79,7 @@ public class PhoneApp {
 				System.out.println("< 2. 등록 >");
 				// 안내출력
 
-				// 입력폼....
+				// 입력폼
 				sc.nextLine();
 				System.out.print(">이름 : ");
 				String personAddName = sc.nextLine();
@@ -88,18 +88,16 @@ public class PhoneApp {
 				System.out.print(">회사전화 : ");
 				String personAddCompany = sc.nextLine();
 
-				// 데이타를 person
-				personList.add(new Person(personAddName, personAddHp, personAddCompany));
-
+				// 데이터를 person에 담는다.
 				// 리스트에 add
+				personList.add(new Person(personAddName, personAddHp, personAddCompany));
 
 				// 빨대준비
 				OutputStream out = new FileOutputStream("./PhoneDB.txt");
 				OutputStreamWriter osw = new OutputStreamWriter(out, "UTF-8");
 				BufferedWriter bw = new BufferedWriter(osw);
 
-				// 리스트를 , 조합
-				// 파일에 쓰고
+				// 리스트 형식에 맞게 ,를 사용하여 조합
 				for (Person p : personList) {
 					bw.write(p.getName() + "," + p.getHp() + "," + p.getCompany() + "\n");
 				}
@@ -167,8 +165,7 @@ public class PhoneApp {
 //-----------------------------------------------------------------------------------------------------------------------
 			case 5:
 				// 종료
-				System.out.println("< 5. 종료 >");
-				System.out.println("");
+				System.out.println("< 5. 종료 >\n");
 				System.out.println("****************************************");
 				System.out.println("*                                   감사합니다.                               *");
 				System.out.println("****************************************");

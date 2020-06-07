@@ -76,7 +76,7 @@ public class PhoneManager {
 
 		// 메뉴 번호를 사용자로부터 입력 받을 수 있게 Scanner를 사용합니다.
 		int menuNo = sc.nextInt();
-		return menuNo;//////////////////////////////////////////
+		return menuNo;
 
 	}
 
